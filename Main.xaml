@@ -1,0 +1,596 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="824,2948" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="784,2828" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://vtext-cdn.vhlcentral.com/vtext_daccord2ev1/book.html?rid=0" Name="url" />
+      <Variable x:TypeArguments="x:String" Name="str1" />
+      <Variable x:TypeArguments="s:String[]" Name="arr1" />
+      <Variable x:TypeArguments="x:String" Name="str2" />
+      <Variable x:TypeArguments="s:String[]" Name="arr2" />
+      <Variable x:TypeArguments="x:String" Name="title" />
+      <Variable x:TypeArguments="x:String" Name="total" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[url]">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="216,68" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image 'chrome.exe Vista'" sap:VirtualizedContainerService.HintSize="746,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_1">
+      <ui:WaitImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="2" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALUAAAAnCAYAAABJ/QnhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAAdySURBVHhe7Zv5UxQ7EMff//8TinepqIi3It4K4oH3jWd5X3gAKngrWubVJzth+/X2zs4umcU3lW/Vt9jdSWZ6ku90ujvDPz09PS4xsUpMok6sHJOoEyvHJOrEyjGJOrFyTKJOrByTqBMrxyTqxMoxiTqxckyiTqwck6gTK8ck6sTKseuiXr9+vdu2bZvbv3+/2717t9u6datbsWKF2fZv4I4dOxpotfsb+H+ytUx2RdQI+dSpU25iYsL9+vXLaXz69Mk9ePDAHTt2zC1btsw8x2IRuyU+fPhgtvsb+OzZs8zKGq5fv262qzpLF/Xg4KCbmprKhrk1JicnzfMsFpOoi3Pz5s3u5MmT5rFuslRRHzp0yP38+TMb4mKYnp42z7VYTKIuzp07d/rr4sT4bLXpBksTdV9fn3v37p2/SYmZmRl37tw5L/hdu3a548eP+9AjIE/UGzdudHv27HFHjx51Bw8e9AO3fPlys20rrlq1yq8iBw4ccNu3bzfbwIWImtxh3759bmRkxP/lu9WuFYva2qmoN23a5Pbu3evnBDvJczoZ1yDqgDt37ixKvlSaqG/dupXdWh3Pnz/3A2i1ZzDfvn1ripqJvHv3run1379/7y5dumROwokTJ7wIA8O5x8bG3OzsbHaGGp48eeIfxNB3YGBgvp+GPCfUXun06dM+f7DAGPBAyvZwIbaeOXPG9/n+/XvWogb6yXPq0I5QATv//PmT9aiDvrdv3/YPk+yTRy1q8OPHj66HJKWIevXq1T75k0CQrTzVunXrvNeWvx0+fLjhXBaYaDy57ItQJBDKvXv3sm+NePTo0XxfRF0UQdQrV670QigCVoBwLbgQWxF1EQRR9/b2ei9aBMPDw/PXaUVL1AHdDElKEfWRI0eyW6nj5s2bZts84tW1lwKEMN++fcu+1cFEyf5aKEUQPFMnor5y5Ur2Sw2fP3/2IicM0J77y5cv/hoxbG1X1IR/GjiOly9fevHJClUsUQcwRzgvq38sliLq8+fPZ7dQB3Gw1TaPPAgSCAHPjadZs2ZNg4gAcWfobwnl48ePXmQXL1703l3jwoULvi/LO6KxYmp+lyTrJ9aX4DpbtmyZt4W4GNFIME4xbA12WDG1tBMydqwCElevXvWra7AFZ8KDgtBjixoQksh7j81SRH3jxo3M/Dra3QhgKddeGg8j2yxdutR7H4nx8fH549aSLmNR6ucIRwLbw3FYNFFEGBLaVqjtQeTNjnVia5FEkfPovQJyEt0O9vf3lyLqAO6njJCkFFHfv38/M7sOBshq24zsNmpYA8CESCCGcMwSiuwLnz59mh2tgYRUHi8qal2LZyPJogRh1JIlS3z/GLYWETWe2grpmDMSOipStNH9irBdUQeQH8QMSUoRNd5SI68UZZHyksTv37/NG6ckKEEcG8pIRYSiH8BORE3lheu2C6oVYdmPYWvRkl6rJJGH7fLlyw2Jdyt2KmoQMyQpRdTEehqI1GrbjKOjo1nPGqQAJInVJRA/SyzHiggFYUh0Imqux3XbBRUhcgPOEcPWoqImFOT8rfDmzRtfs7bOYXEhogaEYzE8dimi1t4TXLt2zWzbjNpTEwcW8dQkk+146hiiJv7nuhJW6GFxMUQNqbwQk+vatkY7VatORU1szT6Fdc5OWIqoSXBYTiQowVElsNoHsoyzacNnK6a2Qhi9KkgxlCFqGQdLas939uzZhjZ5LEPUOpG0uHbtWv/GJOOo+wPLjmbsRNSEHLF3HUsRNbSSRRKdDRs2mO0RLIMaBhHvp7P9UMKSfP36dXa0hvBQwBhC0ecgZEAIsg3UeQTXykuOecBlXT2GrbrsxxzI45DrsuOpfw/UTkKufK3YjqhjhRoWSxM1IrU2SHgfhK1fvAM7jGzUsMSFmFROpt5qp24a6tCIvlXsHkMo1MU1qBsz0dSeeWeCe+WvBg8pMT+TF2rrVBdIwhgbtszDdWLYqo/zALKsc21soDyHqAEOhrGSrxcwprocy6aRvEYei4g6dqhhsTRRQz1RRSAnkwmwtsh538P6XXumGELB21pJIB7s69ev/jOTSVtdqw4gH2AydUgWW9Q6VApgrObm5nxNP4g6ALtevXrlPafOC0A7723kiTpUN2KHGhZLFTXEU1kCbAZeapL9SaaCePLw4sWL/2w7wxhCgVaJUiKIGo+od0HzEFvUVGHo1wyWqPOQl2habCbq2HXoVixd1JCyEKFCs38WQPR4WUIRq/DPks1xy2PiaaisWOU+hMK5A5sJRbaxRM2yTMhAkqhBfTqIOpAH+eHDhw2eOSC8ATc0NDTfJ5athHSPHz8232hE1IRAhH945mZlSI61s5MYqEXN3Oix6Qa7IupAtrV5rwCREs8RH3PTiMZqr4knJh7j/WSEw7sMlpgDeUD49zBJ3UYft9oEEn/yPgfveXAPfM6znSoQ90f+wAMb8gjrGrFtxWsT6zNG1KXx0LoNSTsPFnkD44l97e78SgZRx9xI6YRdFXVitYmoux1qWEyiTqwck6gTK8ck6sTKMYk6sXJMok6sGHvcv/Z8TLJiFnLWAAAAAElFTkSuQmCC" />
+      </ui:WaitImageAppear.Image>
+      <ui:WaitImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Vista Higher Learning - Google Chrome' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WaitImageAppear>
+    <Sequence DisplayName="Desktop" sap:VirtualizedContainerService.HintSize="482,1132" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'VistaHigh Chrome_wi'" sap:VirtualizedContainerService.HintSize="444,1040" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="46a2c0a8c4102b6e7f90f402f7b31e0f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="414,854" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:AnchorBase AnchorPosition="Top" sap:VirtualizedContainerService.HintSize="376,432" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                <ui:AnchorBase.Action>
+                  <ActivityAction x:TypeArguments="ui:Anchor">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                    </ActivityAction.Argument>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'client'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="68" OffsetY="26" Position="TopLeft" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="560224973e2e5fb7583355f98b173d57" Selector="&lt;ctrl role='client' /&gt;" WaitForReady="INTERACTIVE" />
+                      </ui:Click.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Click>
+                  </ActivityAction>
+                </ui:AnchorBase.Action>
+                <ui:AnchorBase.AnchorProvider>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'document Vista'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="db92977be828e759672e109eb02e269d" Selector="&lt;ctrl name='Vista Higher Learning - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl idx='5' role='pane' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.ClippingRegion>
+                          <ui:Region Rectangle="24, 14, 79, 20" />
+                        </ui:Target.ClippingRegion>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:WaitUiElementAppear>
+                </ui:AnchorBase.AnchorProvider>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AnchorBase>
+              <ui:AnchorBase AnchorPosition="Bottom" sap:VirtualizedContainerService.HintSize="376,52" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                <ui:AnchorBase.Action>
+                  <ActivityAction x:TypeArguments="ui:Anchor">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                    </ActivityAction.Argument>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'document Vista'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="0" OffsetY="0" Position="TopLeft" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="020617f009e0e54f431c137d8de5e7d4" Selector="&lt;ctrl role='document' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target.ClippingRegion>
+                            <ui:Region Rectangle="134, 503, 56, 17" />
+                          </ui:Target.ClippingRegion>
+                        </ui:Target>
+                      </ui:Click.Target>
+                    </ui:Click>
+                  </ActivityAction>
+                </ui:AnchorBase.Action>
+                <ui:AnchorBase.AnchorProvider>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'document Vista'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2" WaitActive="False" WaitVisible="False">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="aa60bb5581f97de7dae2157e5797cc19" Selector="&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.ClippingRegion>
+                          <ui:Region Rectangle="138, 506, 55, 11" />
+                        </ui:Target.ClippingRegion>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                </ui:AnchorBase.AnchorProvider>
+              </ui:AnchorBase>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'document Vista'" sap:VirtualizedContainerService.HintSize="376,52" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f0e323ef1072f4f76c5d102109deb96b" Selector="&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target.ClippingRegion>
+                      <ui:Region Rectangle="346, 38, 110, 12" />
+                    </ui:Target.ClippingRegion>
+                  </ui:Target>
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client'" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition Position="Center">
+                    <ui:CursorPosition.OffsetX>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetX>
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4fe936ac468e8b86524a5bb53561618c" Selector="&lt;ctrl name='Vista Higher Learning' role='document' /&gt;&lt;ctrl role='client' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:Click.Target>
+              </ui:Click>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WindowScope>
+    </Sequence>
+    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'document Vista'" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
+      <ui:GetOCRText.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_3" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+        </ActivityFunc>
+      </ui:GetOCRText.OCREngine>
+      <ui:GetOCRText.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a36d9de8c1a4328f1b49b04e075b0080" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="313, 116, 162, 45" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:GetOCRText.Target>
+      <ui:GetOCRText.Text>
+        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+      </ui:GetOCRText.Text>
+    </ui:GetOCRText>
+    <Sequence DisplayName="Desktop" sap:VirtualizedContainerService.HintSize="746,568" sap2010:WorkflowViewState.IdRef="Sequence_11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'VistaHigh Chrome_wi'" sap:VirtualizedContainerService.HintSize="708,476" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="a626465475263e199f16fd9642b96a75" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;">
+        <ui:WindowScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="678,290" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="640,198" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+                <ui:AnchorBase.Action>
+                  <ActivityAction x:TypeArguments="ui:Anchor">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                    </ActivityAction.Argument>
+                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'document Vista'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition OffsetX="0" OffsetY="0" Position="TopLeft" />
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a6e9bc5e6d1c3ef8209445b66519d5c5" Selector="&lt;ctrl role='document' /&gt;" WaitForReady="INTERACTIVE">
+                          <ui:Target.ClippingRegion>
+                            <ui:Region Rectangle="955, 12, 13, 17" />
+                          </ui:Target.ClippingRegion>
+                        </ui:Target>
+                      </ui:Click.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Click>
+                  </ActivityAction>
+                </ui:AnchorBase.Action>
+                <ui:AnchorBase.AnchorProvider>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'document Vista'" sap:VirtualizedContainerService.HintSize="216,52" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3" WaitActive="False" WaitVisible="False">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="05a6f5eb0ed1feebeefcf3f8e3b818a2" Selector="&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+                        <ui:Target.ClippingRegion>
+                          <ui:Region Rectangle="953, 10, 19, 22" />
+                        </ui:Target.ClippingRegion>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                </ui:AnchorBase.AnchorProvider>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:AnchorBase>
+            </Sequence>
+          </ActivityAction>
+        </ui:WindowScope.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WindowScope>
+    </Sequence>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'document Vista'" sap:VirtualizedContainerService.HintSize="746,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3fb7d1dcec69edfe5376df499de40b70" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="1072, 6, 37, 30" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click 'document Vista'" sap:VirtualizedContainerService.HintSize="746,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5d22f9c7991ce93ac313a47215de76c8" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="481, 316, 44, 11" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'document Vista'" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6573a0576243fc772a24ffd574c71d7b" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="1074, 6, 31, 31" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'document Vista'" sap:VirtualizedContainerService.HintSize="746,208" sap2010:WorkflowViewState.IdRef="GetOCRText_1">
+      <ui:GetOCRText.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+        </ActivityFunc>
+      </ui:GetOCRText.OCREngine>
+      <ui:GetOCRText.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0b778526a17edf17bda9398c07e404b5" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="311, 182, 109, 371" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:GetOCRText.Target>
+      <ui:GetOCRText.Text>
+        <OutArgument x:TypeArguments="x:String">[str1]</OutArgument>
+      </ui:GetOCRText.Text>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetOCRText>
+    <Assign sap:VirtualizedContainerService.HintSize="746,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[arr1]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[str1.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'document Vista'" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
+      <ui:GetOCRText.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="216,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+        </ActivityFunc>
+      </ui:GetOCRText.OCREngine>
+      <ui:GetOCRText.Target>
+        <ui:Target Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15cf80a02830938744eee95bcd7308a3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='1' title='Vista Higher Learning - Google Chrome' /&gt;&lt;ctrl name='Vista Higher Learning' role='document' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="427, 181, 106, 371" />
+          </ui:Target.ClippingRegion>
+        </ui:Target>
+      </ui:GetOCRText.Target>
+      <ui:GetOCRText.Text>
+        <OutArgument x:TypeArguments="x:String">[str2]</OutArgument>
+      </ui:GetOCRText.Text>
+    </ui:GetOCRText>
+    <Assign sap:VirtualizedContainerService.HintSize="746,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[arr2]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[str2.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="quizlet.com">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="216,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <ui:WaitImageAppear FoundElement="{x:Null}" DisplayName="Find Image 'chrome.exe Your'" sap:VirtualizedContainerService.HintSize="746,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_3">
+      <ui:WaitImageAppear.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="2" TargetImageBase64="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" />
+      </ui:WaitImageAppear.Image>
+      <ui:WaitImageAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html app='chrome.exe' title='Your Sets | Quizlet' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitImageAppear.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WaitImageAppear>
+    <Sequence DisplayName="Desktop" sap:VirtualizedContainerService.HintSize="746,68" sap2010:WorkflowViewState.IdRef="Sequence_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'YourSetsQ Page'" sap:VirtualizedContainerService.HintSize="430,518" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5e9911880b5f5aa2abb50f089b93ec27" Selector="&lt;html app='chrome.exe' title='Your Sets | Quizlet' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="368,372" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="330,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                <ui:Click.CursorPosition>
+                  <ui:CursorPosition OffsetX="12" OffsetY="11" Position="TopLeft" />
+                </ui:Click.CursorPosition>
+                <ui:Click.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="207f0849953c945024aea9c20c5e861d" Selector="&lt;webctrl aaname='Create' tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                </ui:Click.Target>
+              </ui:Click>
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TEXTAREA'" EmptyField="False" sap:VirtualizedContainerService.HintSize="330,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[title]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2223fd50be73ca8d262a93bb1edb1363" Selector="&lt;webctrl tabindex='5' tag='TEXTAREA' /&gt;" WaitForReady="COMPLETE" />
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TEXTAREA'" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="85ef61e3026f7c8ba1052c160792a4de" Selector="&lt;html app='chrome.exe' title='Create a New Study Set | Quizlet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;textarea' idx='1' tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(0, 25)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="i" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="334,244" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="296,152" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="258,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[total]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[total +arr1(Convert.ToInt32(i)).ToString() + "[k(tab)]" + arr2(Convert.ToInt32(i)).ToString() + "[k(tab)]"]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:TypeInto DelayBefore="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBetweenKeys="30" DisplayName="Type Into 'TEXTAREA'" EmptyField="False" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[total]">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="85ef61e3026f7c8ba1052c160792a4de" Selector="&lt;html app='chrome.exe' title='Create a New Study Set | Quizlet' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;label&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;textarea' idx='1' tag='TEXTAREA' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="46a1fc87c051c2eff949d2e7a53e52d4" Selector="&lt;html app='chrome.exe' title='Create a New Study Set | Quizlet' /&gt;&lt;webctrl aaname='Create' idx='1' parentid='SetPageTarget' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="746,52" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Completed.&quot;]" TopMost="True" />
+  </Sequence>
+</Activity>
